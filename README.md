@@ -15,66 +15,26 @@ public class Main{
         System.out.println("Bot: " + enemypick);
         System.out.println("===========================");
 
-        if(pick < enemypick) {// you either 1 or 2
-            if (pick < 2) { // you are rock
-                if(enemypick == 3) {
-                    System.out.println("You: ✊ vs ✌\uFE0F:Bot");
-                    System.out.print("You Won");
-                }
-                else{
-                    System.out.println("You: ✊ vs ✋:Bot");
-                    System.out.print("You Lose");
-                }
-            }
-            else {//you are paper
-                if(enemypick == 3) {
-                    System.out.println("You: ✋ vs ✌\uFE0F:Bot");
-                    System.out.print("You Lose");
-                }
-                else{
-                    System.out.println("You: ✋ vs ✊:Bot");
-                    System.out.print("You Won");
-                }
-            }
+        String[] playerHand = {"","✊", "✋", "✌\uFE0F"};
+        String[] BotHand = {"","✊","✋","✌\uFE0F"};
+
+
+        if(pick == enemypick) {
+            System.out.println("You: " + playerHand[pick] + " VS " + BotHand[enemypick] + ":Bot");
+            System.out.print("Tie");
         }
-        else if(pick > enemypick) {//you either 2 or 3
-            if(pick < 3){// you are paper
-                if(enemypick == 3){
-                    System.out.println("You: ✋ vs ✌\uFE0F:Bot");
-                    System.out.print("You Lose");
-                }
-                else{
-                    System.out.println("You: ✋ vs ✊:Bot");
-                    System.out.print("You Won");
-                }
-            }
-            else {
-                if(enemypick == 1){//you are scissor
-                    System.out.println("You: ✌\uFE0F vs ✊:Bot");
-                    System.out.print("You Lose");
-                }
-                else{
-                    System.out.println("You: ✌\uFE0F vs ✋:Bot");
-                    System.out.print("You Won");
-                }
-            }
+        else if((pick == 1 && enemypick == 2) || (pick == 2 && enemypick == 3) || (pick == 3 && enemypick == 1)){
+                System.out.println("You: " + playerHand[pick] + " VS " + BotHand[enemypick] + ":Bot");
+                System.out.println("===========================");
+
+                System.out.print("         You Lose");
         }
         else{
-            System.out.print("Tie");
-            if(pick == 1){
-                System.out.println("You: ✊ vs ✊ :Bot");
-            }
-            else if(pick == 2){
-                System.out.println("You: ✋ vs ✋ :Bot");
+            System.out.println("You: " + playerHand[pick] + " VS " + BotHand[enemypick] + ":Bot");
+            System.out.println("===========================");
 
-            }
-            else{
-                System.out.println("You: ✌\uFE0F vs ✌\uFE0F :Bot");
-            }
+            System.out.print("         You Win");
         }
-
-
-
         scanner.close();
     }
-}****
+}
