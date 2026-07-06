@@ -1,2 +1,23 @@
-# java-rock-paper-scissor
-# Rock Paper Scissors (Java)  A simple console-based Rock Paper Scissors game made while learning Java.  ## Features - Player vs Computer - Random computer choice - Win/Lose/Tie detection - Console interface  ## Technologies - Java - Scanner - Random  ## What I learned - User input - Conditional statements - Nested ifelse - Random number generation
+# Java Rock Paper Scissors
+
+A simple console-based Rock Paper Scissors game made while learning Java.
+
+## Features
+- Player vs Computer
+- Random computer choice
+- Win/Lose/Tie detection
+- Console interface
+
+## Technologies
+- Java
+- Scanner
+- Random
+
+## What I Learned
+- User input with `Scanner`
+- Conditional statements (`if`, `else if`, `else`)
+- Nested `if` statements
+- Random number generation with `Random`
+
+## Author
+Renz S. Ramirez
